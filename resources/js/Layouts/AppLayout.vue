@@ -23,6 +23,24 @@
                                     Dashboard
                                 </jet-nav-link>
                             </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <jet-nav-link :href="route('lecture')" :active="route().current('lecture')">
+                                    수강 과목
+                                </jet-nav-link>
+                            </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <jet-nav-link :href="route('subjectlist')" :active="route().current('subjectlist')">
+                                    교과목 목록
+                                </jet-nav-link>
+                            </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <jet-nav-link :href="route('applysubject')" :active="route().current('applysubject')">
+                                    교과목 등록
+                                </jet-nav-link>
+                            </div>
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
