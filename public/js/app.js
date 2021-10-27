@@ -20649,11 +20649,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     apply: function apply() {
+      var _this = this;
+
       axios.post('/applysubject/newsubject', {
         name: this.name,
         score: this.score,
         exp: this.exp
-      }).then(function (response) {})["catch"](function (error) {
+      }).then(function (response) {
+        _this.name = '';
+        _this.score = 0;
+        _this.exp = '';
+      })["catch"](function (error) {
         console.log(error);
       });
     }
@@ -24783,7 +24789,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [_hoisted_1, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.sub, function (s) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
       key: s.id
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(s.name), 1
+    }, " 과목 명: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(s.name) + " 학점: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(s.score), 1
     /* TEXT */
     );
   }), 128

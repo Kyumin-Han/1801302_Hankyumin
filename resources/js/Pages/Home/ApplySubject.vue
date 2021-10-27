@@ -22,6 +22,9 @@ export default {
         apply() {
             axios.post('/applysubject/newsubject', {name: this.name, score: this.score, exp: this.exp})
             .then(response=>{
+                this.name = ''
+                this.score = 0
+                this.exp = ''
             })
             .catch(error=>{
                 console.log(error)

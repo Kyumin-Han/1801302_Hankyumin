@@ -9,12 +9,6 @@ use Inertia\Inertia;
 class Subjectcontroller extends Controller
 {
     public function index() {
-        return Inertia::render('Home/SubjectContainer');
-    }
-
-    public function read() {
-        $subject = Subjects::all();
-
-        return $subject;
+        return Inertia::render('Home/SubjectContainer', ['subject'=>Subjects::all()->paginate(1)]);
     }
 }
